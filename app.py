@@ -23,7 +23,7 @@ def hello_world():  # put application's code here
         np_arr = floats_str_to_np_arr(text)
         make_picture('AgesAndHeights.pkl', model, np_arr, path)
 
-        return render_template('index.html', href=path)
+        return render_template('index.html', href=path[4:])
 
 
 def make_picture(training_data_filename, model, new_inp_np_arr, output_file):
